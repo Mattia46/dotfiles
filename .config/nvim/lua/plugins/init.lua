@@ -23,17 +23,23 @@ return {
       require("nvim-tree").setup {}
     end
   },
-	'Mofiqul/dracula.nvim',
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "dracula",
-    },
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
+	-- 'Mofiqul/dracula.nvim',
+  -- {
+    -- "LazyVim/LazyVim",
+    -- opts = {
+      -- colorscheme = "dracula",
+    -- },
+  -- },
   {
-    "ellisonleao/gruvbox.nvim",
+    "morhetz/gruvbox.nvim",
     priority = 1000 , config = true,
-    opts = { colorscheme = 'gruvbox' }
+    opts = {}
   },
   'ctrlpvim/ctrlp.vim',
 	'vim-airline/vim-airline',
