@@ -2,22 +2,14 @@
 
 ## OS install
 
- * only system utility - no DE
- * SID source-list
- * apt install kitty git wofi firefox-esr pipewire wireplumber swaybg stow
- * apt install nvim tldr xclip make 
+ * Arch sway
+ * pacman -S swaylock swaybg swayidle rofi xclip i3blocks neovim stow
 
-## Install Window manager
-
-```bash
-
-sudo apt install hyprland
-```
 
 ## clone the repo
 
 ```bash
-git clone https://github.com/mattia46/dotfiles.git ~/dotfiles
+git clone https://github.com/mattia46/dotfiless.git ~/dotfiles
 ```
 
 ## Install zsh
@@ -40,7 +32,10 @@ cd ~/dotfiles
 stow .
 ```
 
+## Fonts
 
+fc-cache -vf
+fc-list # show list the new fonts
 
 
 

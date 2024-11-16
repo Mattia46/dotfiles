@@ -8,7 +8,7 @@ interval=3600
 color=#A4C2F4
 
 [mediaplayer]
-command=$HOME/.dotfiles/scripts/i3blocks/mediaplayerA
+command=$HOME/dotfiles/scripts/i3blocks/mediaplayerA
 instance=spotify
 interval=5
 signal=10
@@ -23,22 +23,22 @@ interval=60
 # interval=5
 
 [bandwidth3]
-command=$HOME/.dotfiles/scripts/i3blocks/bandwidth
+command=$HOME/dotfiles/scripts/i3blocks/bandwidth
 interval=persist
 markup=pango
 
 [disk]
-command=$HOME/.dotfiles/scripts/i3blocks/disk
+command=$HOME/dotfiles/scripts/i3blocks/disk
 LABEL=
 interval=30
 
 [memory]
-command=$HOME/.dotfiles/scripts/i3blocks/memory
+command=$HOME/dotfiles/scripts/i3blocks/memory
 label=RAM
 interval=30
 
 [cpu_usage]
-command=$HOME/.dotfiles/scripts/i3blocks/cpu_usage
+command=$HOME/dotfiles/scripts/i3blocks/cpu_usage
 interval=10
 LABEL=
 T_WARN=50
@@ -46,7 +46,7 @@ T_CRIT=80
 DECIMALS=2
 #
 [temperature]
-command=$HOME/.dotfiles/scripts/i3blocks/temperature
+command=$HOME/dotfiles/scripts/i3blocks/temperature
 label=
 interval=10
 T_WARN=70
