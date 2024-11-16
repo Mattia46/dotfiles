@@ -38,4 +38,7 @@ fc-cache -vf
 fc-list # show list the new fonts
 
 
+## CMD
+
+pacman -Qtdq | sudo pacman -Rns - # remove orphan pkgs
 
