@@ -24,6 +24,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 * remove ~/.z*
 
+## Install copy past wayland
+
+```bash
+sudo pacman -S wl-clipboard
+```
 
 ## Apply dotfiles
 
@@ -34,14 +39,25 @@ stow .
 
 ## Fonts
 
+```bash
 fc-cache -vf
 fc-list # show list the new fonts
-
+```
 
 ## CMD
 
+```bash
 pacman -Qtdq | sudo pacman -Rns - # remove orphan pkgs
+```
 
+## NVM
+
+```bash
+cd
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+// make sure to clone in $HOME dir
+```
 
 ## Syncthing
 

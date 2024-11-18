@@ -16,19 +16,11 @@ source $ZSH/oh-my-zsh.sh
 
 
 # NVM
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export NVM_DIR="${HOME}/.dotfiles/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-  export PATH=$PATH:~/.dotfiles/scripts
-  source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export NVM_DIR="${HOME}/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export PATH=$PATH:~/dotfiles/scripts
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
-  [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
-  export PATH=$PATH:~/.dotfiles/scripts:/opt/homebrew/bin
-  source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
 
 # TMUX
 export TERM="xterm-256color"
