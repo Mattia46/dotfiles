@@ -3,7 +3,7 @@
 ## OS install
 
  * Arch sway
- * pacman -S swaylock swaybg swayidle rofi xclip i3blocks neovim stow
+ * pacman -S swaylock swaybg swayidle rofi xclip i3blocks neovim stow keepassxc
 
 
 ## clone the repo
@@ -42,3 +42,11 @@ fc-list # show list the new fonts
 
 pacman -Qtdq | sudo pacman -Rns - # remove orphan pkgs
 
+
+## Syncthing
+
+```bash
+sudo pacman -S syncthing
+sudo systemctl enable --now syncthing@user.service
+# port 8384
+```
