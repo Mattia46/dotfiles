@@ -72,4 +72,15 @@ vim.keymap.set('n', '<Leader>mn', ':%!jq .<CR>')
 
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR> <c-w>=')
 
+-- Fugitive map
+
+vim.keymap.set('n', '<leader>gs', ':Git<CR>')
+vim.keymap.set('n', '<leader>gb', ':Git blame<CR>')
+vim.keymap.set('n', '<leader>gd', ':Gvdiff<CR>')
+vim.keymap.set('n', '<leader>ge', ':Gedit<CR>')
+vim.keymap.set('n', '<leader>gm', ':diffget //2<CR>')
+vim.keymap.set('n', '<leader>gr', ':Gread<CR>')
+vim.keymap.set('n', '<leader>gw', ':Gwrite<CR>')
+
+
 require("config.lazy")
