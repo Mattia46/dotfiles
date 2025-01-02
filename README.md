@@ -66,3 +66,12 @@ sudo pacman -S syncthing
 sudo systemctl enable --now syncthing@user.service
 # port 8384
 ```
+
+## Docker
+
+```bash
+sudo pacman -S docker docker-compose
+sudo systemctl enable --now docker
+sudo usermod -aG docker $USER 
+# logout and back in to apply
+```
