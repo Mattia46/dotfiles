@@ -42,3 +42,10 @@ HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
 setopt HIST_EXPIRE_DUPS_FIRST
+
+# add user@domain to the custom cli git infos
+PS1="${FG[237]}\${(l.\$(afmagic_dashes)..-.)}%{$reset_color%}
+[%F{yellow}%n%f@%F{blue}${${(%):-%m}#zoltan-}%f] ${FG[032]}%~\$(git_prompt_info)\$(hg_prompt_info) ${FG[105]}%(!.#.»)%{$reset_color%} "
+
+# export nvim as defualt editor
+export EDITOR=/usr/bin/nvim 
