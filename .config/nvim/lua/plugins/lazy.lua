@@ -64,6 +64,14 @@ require('lazy').setup({
   { "morhetz/gruvbox", as = "gruvbox" },
   { "EdenEast/nightfox.nvim" },
   {
+    'eddyekofo94/gruvbox-flat.nvim',
+    priority = 1000,
+    enabled = true,
+    config = function()
+      vim.cmd([[colorscheme gruvbox-flat]])
+    end,
+  },
+  {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   },
