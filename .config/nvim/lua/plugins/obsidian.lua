@@ -1,8 +1,12 @@
 require("obsidian").setup({
   workspaces = {
-    {
-        name = "ZazenCodes",
-        path = "~/notes",
+      {
+        name = "personal",
+        path = "~/mattiaSync/notes/personal",
+      },
+      {
+        name = "CS",
+        path = "~/mattiaSync/notes/cs",
       },
   },
   notes_subdir = "inbox",

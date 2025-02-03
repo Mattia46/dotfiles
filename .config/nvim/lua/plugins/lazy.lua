@@ -20,6 +20,7 @@ require('lazy').setup({
     build = function() vim.fn["mkdp#util#install"]() end,
   },
 
+  -- Note taking
   {
     "epwalsh/obsidian.nvim",
     version = "*",
@@ -28,6 +29,13 @@ require('lazy').setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+  },
+  {
+      'MeanderingProgrammer/render-markdown.nvim',
+      dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+      ---@module 'render-markdown'
+      ---@type render.md.UserConfig
+      opts = {},
   },
 
   {
