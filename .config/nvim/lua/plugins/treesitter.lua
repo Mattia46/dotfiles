@@ -2,7 +2,7 @@
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = {
-    'lua', 'python','regex', 'bash', 'markdown', 'markdown_inline', 'sql', 'vimdoc', 'javascript'
+    'lua', 'python','regex', 'bash', 'markdown', 'markdown_inline', 'sql', 'vimdoc', 'javascript', 'json', 'tsx', 'typescript', 'vim', 'yaml'
   },
 
   highlight = {
@@ -12,7 +12,13 @@ require('nvim-treesitter.configs').setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
+    custom_captures = {
+      -- Example: Change how 'keyword' is highlighted in Markdown files
+      ["markdown.heading"] = "Title",
+      ["markdown.bold"] = "BoldText",
+    },
   },
+  fold = { enable = true },
   indent = { enable = true },
 }
 

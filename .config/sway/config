@@ -4,8 +4,9 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-### Variables
-#
+### Fonts
+font pango:FiraCode Nerd Font 10
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -14,7 +15,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 set $menu rofi -show drun
 
@@ -125,7 +126,7 @@ input * {
     set $ws10 "10"
 
     # Allocate applications to workspaces
-    for_window [class="foot"] move to workspace $ws1
+    for_window [class="alacritty"] move to workspace $ws1
 
     # Switch to workspace
     bindsym $mod+1 workspace $ws1

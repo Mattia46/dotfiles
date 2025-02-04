@@ -3,7 +3,7 @@
 ## OS install
 
  * Arch sway
- * pacman -S swaylock swaybg swayidle rofi xclip i3blocks neovim stow keepassxc
+ * pacman -S swaylock swaybg swayidle rofi xclip i3blocks neovim stow keepassxc fd ripgrep
 
 
 ## clone the repo
@@ -41,7 +41,17 @@ stow .
 
 ```bash
 fc-cache -vf
-fc-list # show list the new fonts
+fc-list # show list the new fonts, includes the ~/.fonts folder. Useful if linked from dotfiles
+
+# firacode font
+sudo pacman -S ttf-firacode-nerd
+
+# throubleshooting
+fc-list : family # shows all the family available
+# use the family name in both alacritty.toml and sway/config pango
+
+fc-match # shows the applied font
+
 ```
 
 ## CMD
@@ -56,7 +66,7 @@ pacman -Qtdq | sudo pacman -Rns - # remove orphan pkgs
 cd
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
-// make sure to clone in $HOME dir
+# make sure to clone in $HOME dir
 ```
 
 ## Syncthing
@@ -72,6 +82,6 @@ sudo systemctl enable --now syncthing@user.service
 ```bash
 sudo pacman -S docker docker-compose
 sudo systemctl enable --now docker
-sudo usermod -aG docker $USER 
+sudo usermod -aG docker $USER
 # logout and back in to apply
 ```

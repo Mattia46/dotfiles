@@ -21,23 +21,23 @@ require('lazy').setup({
   },
 
   -- Note taking
-  {
-    "epwalsh/obsidian.nvim",
-    version = "*",
-    lazy = true,
-    ft = "markdown",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
-  {
-      'MeanderingProgrammer/render-markdown.nvim',
-      dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
-      ---@module 'render-markdown'
-      ---@type render.md.UserConfig
-      opts = {},
-  },
-
+  -- {
+  --   "epwalsh/obsidian.nvim",
+  --   version = "*",
+  --   lazy = true,
+  --   ft = "markdown",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --   },
+  -- },
+  -- {
+  --   'MeanderingProgrammer/render-markdown.nvim',
+  --   dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+  --   opts = {
+  --     latex = { enabled = false }
+  --   }
+  -- },
+  --
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -60,7 +60,10 @@ require('lazy').setup({
 
   { "tpope/vim-surround" },
   { 'tpope/vim-fugitive' },
-  { 'ctrlpvim/ctrlp.vim' },
+
+  -- currently using telescope
+  -- { 'ctrlpvim/ctrlp.vim' },
+
   -- gives definition preview instead of redirect to file
   {
     'rmagatti/goto-preview',
