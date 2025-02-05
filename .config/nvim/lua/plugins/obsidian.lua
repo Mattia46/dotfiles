@@ -1,16 +1,24 @@
 require("obsidian").setup({
   workspaces = {
       {
-        name = "personal",
-        path = "~/mattiaSync/notes/personal",
+        name = "notes",
+        path = "~/notes",
       },
       {
-        name = "CS",
-        path = "~/mattiaSync/notes/cs",
+        name = "personal",
+        path = "~/notes/personal",
       },
+      -- {
+      --   name = "personal",
+      --   path = "~/mattiaSync/notes/personal",
+      -- },
+      -- {
+      --   name = "CS",
+      --   path = "~/mattiaSync/notes/cs",
+      -- },
   },
-  notes_subdir = "inbox",
-  new_notes_location = "notes_subdir",
+  -- notes_subdir = "inbox",
+  -- new_notes_location = "notes_subdir",
 
 
   disable_frontmatter = true,
@@ -22,19 +30,21 @@ require("obsidian").setup({
 
   -- name new notes starting the ISO datetime and ending with note name
   -- put them in the inbox subdir
-  -- note_id_func = function(title)
-  --   local suffix = ""
-  --   -- get current ISO datetime with -5 hour offset from UTC for EST
-  --   local current_datetime = os.date("!%Y-%m-%d-%H%M%S", os.time() - 5*3600)
-  --   if title ~= nil then
-  --     suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
-  --   else
-  --     for _ = 1, 4 do
-  --       suffix = suffix .. string.char(math.random(65, 90))
-  --     end
-  --   end
-  --   return current_datetime .. "_" .. suffix
-  -- end,
+  note_id_func = function(title)
+    -- local suffix = ""
+    -- -- get current ISO datetime with -5 hour offset from UTC for EST
+    -- local current_datetime = os.date("!%Y-%m-%d-%H%M%S", os.time() - 5*3600)
+    -- if title ~= nil then
+    --   -- suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+    --   suffix = title
+    -- else
+    --   for _ = 1, 4 do
+    --     suffix = suffix .. string.char(math.random(65, 90))
+    --   end
+    -- end
+    -- return current_datetime .. "_" .. suffix
+    return title
+  end,
 
   -- key mappings, below are the defaults
   mappings = {
@@ -46,7 +56,7 @@ require("obsidian").setup({
       opts = { noremap = false, expr = true, buffer = true },
     },
     -- toggle check-boxes
-    ["<leader>ti"] = {
+    ["<leader>tt"] = {
       action = function()
         return require("obsidian").util.toggle_checkbox()
       end,
@@ -55,7 +65,7 @@ require("obsidian").setup({
   },
   completion = {
     nvim_cmp = true,
-    min_chars = 2,
+    min_chars = 1
   },
-  -- ui = { enable = false }
+  ui = { enable = false }
 })

@@ -1,11 +1,14 @@
 -- telescope
-vim.keymap.set("n", "<C-p>", ":Telescope find_files<cr>")
+vim.keymap.set("n", "<C-p>", ":Telescope find_files<cr>") -- search file names
+
+-- search text in files. Currently using <leader>K
+-- vim.keymap.set("n", "<leader>fz", ":Telescope live_grep<cr>")
+
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>fo", ":Telescope oldfiles<cr>")
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<cr>")
 
 vim.keymap.set("n", "<leader>fp", ":Telescope git_files<cr>")
-vim.keymap.set("n", "<leader>fz", ":Telescope live_grep<cr>")
 
 -- tree
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR> <c-w>=')
@@ -56,3 +59,35 @@ telescope.setup {
     },
   },
 }
+
+--
+-- -------------------------------------------------------------------------------
+-- --                           Folding section
+-- -------------------------------------------------------------------------------
+-- local vim = vim
+-- local opt = vim.opt
+-- --
+-- opt.foldmethod = "expr"
+-- -- opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldlevel = 99
+-- opt.foldexpr = "nvim_treesitter#foldexpr() + (v:foldstart ? 1 : 0)"
+
+-- Use <CR> to fold when in normal mode
+-- To see help about folds use `:help fold`
+-- vim.keymap.set("n", "<CR>", function()
+--   -- Get the current line number
+--   local line = vim.fn.line(".")
+--   -- Get the fold level of the current line
+--   local foldlevel = vim.fn.foldlevel(line)
+--   if foldlevel == 0 then
+--     vim.notify("No fold found", vim.log.levels.INFO)
+--   else
+--     vim.cmd("normal! za")
+--     vim.cmd("normal! zz") -- center the cursor line on screen
+--   end
+-- end, { desc = "[P]Toggle fold" })
+--
+-------------------------------------------------------------------------------
+--                         End Folding section
+-------------------------------------------------------------------------------
+
