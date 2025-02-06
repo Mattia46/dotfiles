@@ -3,7 +3,7 @@
 ## OS install
 
  * Arch sway
- * pacman -S swaylock swaybg swayidle rofi xclip i3blocks neovim stow keepassxc fd ripgrep
+ * pacman -S swaylock swaybg swayidle rofi-wayland xclip i3blocks neovim stow keepassxc fd ripgrep
 
 
 ## clone the repo

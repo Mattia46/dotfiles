@@ -4,10 +4,6 @@ require("obsidian").setup({
         name = "notes",
         path = "~/notes",
       },
-      {
-        name = "personal",
-        path = "~/notes/personal",
-      },
       -- {
       --   name = "personal",
       --   path = "~/mattiaSync/notes/personal",
