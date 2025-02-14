@@ -4,17 +4,9 @@ require("obsidian").setup({
         name = "notes",
         path = "~/notes",
       },
-      -- {
-      --   name = "personal",
-      --   path = "~/mattiaSync/notes/personal",
-      -- },
-      -- {
-      --   name = "CS",
-      --   path = "~/mattiaSync/notes/cs",
-      -- },
   },
-  -- notes_subdir = "inbox",
-  -- new_notes_location = "notes_subdir",
+  notes_subdir = "inbox",
+  new_notes_location = "notes_subdir",
 
 
   disable_frontmatter = true,

@@ -76,6 +76,14 @@ sudo pacman -S syncthing
 sudo systemctl enable --now syncthing@user.service
 # port 8384
 ```
+## Miscellanus
+
+```bash
+sudo pacman -S dunst libnotify # notification tool + required library
+sudo pacman -S flameshot # take screenshots
+sudo pacman -S nautilus sushi # file manager + preview with space bar
+```
+
 
 ## Docker
 
